@@ -1,12 +1,12 @@
-function mainText(text) {
+function img(text) {
     const element = document.getElementById("main-text");
-    element.innerText = `${text}`;
+    element.innerHTML = `<img src="${text}" alt="img">`;
     console.log(text);
 }
 
 function init() {
     const urlSearchParams = new URLSearchParams(window.location.search);
-    mainText(urlSearchParams.get('h1'));
+    img(urlSearchParams.get('img'));
 }
 
 init();
